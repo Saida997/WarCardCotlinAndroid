@@ -11,11 +11,7 @@ import kotlin.random.Random
 class MainActivity : AppCompatActivity() {
     var scorePlayer_ = 0
     var scoreCPU_ = 0
-    //    val cards = listOf<String>("R.drawable.card10", "R.drawable.card11","R.drawable.card9", "R.drawable.card8",
-//        "R.drawable.card7", "R.drawable.card6","R.drawable.card5", "R.drawable.card4",
-//        "R.drawable.card3", "R.drawable.card2","R.drawable.card14", "R.drawable.card13","R.drawable.card12"
-//        )
-    val cards = listOf<Int>(
+      val cards = listOf<Int>(
         R.drawable.card10, R.drawable.card11, R.drawable.card9, R.drawable.card8,
         R.drawable.card7, R.drawable.card6, R.drawable.card5, R.drawable.card4,
         R.drawable.card3, R.drawable.card2, R.drawable.card14, R.drawable.card13, R.drawable.card12
@@ -30,7 +26,6 @@ class MainActivity : AppCompatActivity() {
             if (scorePlayer_ <20 && scoreCPU_ <20) {
                 var leftNumber = Random.nextInt(0, 12)
                 var rightNumber = Random.nextInt(0, 12)
-                Log.e("Saida", leftNumber.toString())
                 iv_card_left.setImageResource(cards.get(leftNumber))
                 iv_card_right.setImageResource(cards.get(rightNumber))
                 if (leftNumber != rightNumber) {
